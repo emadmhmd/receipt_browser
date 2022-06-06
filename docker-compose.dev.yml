@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  app:
+    image: docker.infogerance.d-fi.fr/nodejs-devenv:${NODEJS_VERSION}
+    ports:
+      - ${BROADCAST_PORT:-8080}:8080
+    volumes:
+      - ./:/app
+    stdin_open: true
+    tty: true
+
